@@ -1,28 +1,32 @@
 <ion-header no-border>
-  <ion-toolbar color="dark">
-    <ion-title>
-      Favoritos
-    </ion-title>
-  </ion-toolbar>
+    <ion-toolbar color="dark">
+        <ion-buttons slot="start">
+            <ion-button color="danger">
+                <ion-thumbnail>
+                    <ion-img [src]="'/assets/img/logo.png'"></ion-img>
+                </ion-thumbnail>
+            </ion-button>
+        </ion-buttons>
+        <ion-title>
+            Favoritos
+        </ion-title>
+    </ion-toolbar>
 </ion-header>
 
-<ion-content color="dark">
+<ion-content color="medium">
 
 
-  <ion-slides [options]="sliderOpts"
-              *ngIf="datalocalService.noticias.length === 0">
-    <ion-slide>
-      
-      <ion-label>No hay favoritos</ion-label>
+    <ion-slides [options]="sliderOpts" *ngIf="datalocalService.noticias.length === 0">
+        <ion-slide>
 
-    </ion-slide>
-  </ion-slides>
+            <ion-label>No hay favoritos</ion-label>
 
+        </ion-slide>
+    </ion-slides>
 
 
-  <app-noticias *ngIf="datalocalService.noticias.length > 0"
-                [enFavoritos]="true"
-                [noticias]="datalocalService.noticias" ></app-noticias>
+
+    <app-noticias *ngIf="datalocalService.noticias.length > 0" [enFavoritos]="true" [noticias]="datalocalService.noticias"></app-noticias>
 
 
 </ion-content>

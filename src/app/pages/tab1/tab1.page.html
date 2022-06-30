@@ -1,12 +1,19 @@
 <ion-header no-border>
     <ion-toolbar color="dark">
+        <ion-buttons slot="start">
+            <ion-button color="danger">
+                <ion-thumbnail>
+                    <ion-img [src]="'/assets/img/logo.png'"></ion-img>
+                </ion-thumbnail>
+            </ion-button>
+        </ion-buttons>
         <ion-title>
-            TOPICOS NEWs
+            NOTICIAS TOP
         </ion-title>
     </ion-toolbar>
 </ion-header>
 
-<ion-content color="dark">
+<ion-content color="medium">
 
     <app-noticias [noticias]="noticias"></app-noticias>
 
